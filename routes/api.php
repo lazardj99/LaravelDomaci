@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/pica', [App\Http\Controllers\PicaController::class, 'insertPica']);
+Route::get('/drzava', [App\Http\Controllers\DrzavaController::class, 'insertDrzava']);
+Route::post('/pica/insert', [App\Http\Controllers\PicaController::class, 'insert']);
+Route::post('/drzava/insert', [App\Http\Controllers\DrzavaController::class, 'insert']);
