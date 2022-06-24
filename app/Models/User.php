@@ -20,8 +20,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
+        'starost',
+        'pol',
         'password',
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -41,4 +45,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function picas()
+    {
+        //return $this->belongsToMany('App\Pica','picas','user_id','pica_id');        
+        return $this->belongsToMany(Pica::class);
+    }
 }

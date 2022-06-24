@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class pica_user extends Model
+class Drzava extends Model
 {
     use HasFactory;
+
+    public function pica()
+    {
+        return $this->belongsTo(pica::class); 
+    }
 }

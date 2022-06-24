@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class drzavas extends Model
+class PicaUser extends Model
 {
     use HasFactory;
+    public $table = 'pica_user';
 }
