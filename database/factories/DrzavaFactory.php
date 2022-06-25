@@ -2,22 +2,21 @@
 
 namespace Database\Factories;
 
+use App\Models\Drzava;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\picas>
- */
-class PicasFactory extends Factory
+class DrzavaFactory extends Factory
 {
+    protected $model=Drzava::class;
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function definition()
     {
         return [
-            //
+            'Naziv'=>$this->faker->userName()
         ];
     }
 }

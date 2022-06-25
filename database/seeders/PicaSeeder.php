@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PicasSeeder extends Seeder
+class PicaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class PicasSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Pica::factory()->count(10)->create();
     }
 }

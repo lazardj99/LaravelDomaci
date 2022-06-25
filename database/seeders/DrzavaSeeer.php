@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DrzavasSeeder extends Seeder
+class DrzavaSeeer extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class DrzavasSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Drzava::factory()->count(10)->create();
     }
 }
